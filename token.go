@@ -86,6 +86,10 @@ type Token struct {
 	segments []*Segment
 }
 
+func NewToken(text []Text, freq int, pos string) Token {
+	return Token{text: text, freq: float64(freq), pos: pos}
+}
+
 // Text 返回分词文本
 func (token *Token) Text() string {
 	return textSliceToString(token.text)
